@@ -9,12 +9,16 @@
 
 ## Kiểm tra local
 
+Kiểm thử chạy trên mạng mô phỏng local, không cần `.env`, RPC hoặc private key. Cấu hình chỉ đọc thông tin xác thực Sepolia khi chọn `--network sepolia`.
+
 ```powershell
 cd contracts
-npm install
+npm ci
 npm run compile
 npm test
 ```
+
+Nếu gặp `hardhat: Permission denied` hoặc `HHE21` sau khi sao chép project từ máy khác, chạy lại `npm ci` trong `contracts`. Lệnh này thay thế `node_modules` bằng các dependency trong lockfile, tạo lại launcher có quyền thực thi và cài binary native đúng hệ điều hành. Không sao chép `node_modules`, `artifacts` hoặc `cache` giữa các máy. Nếu lỗi vẫn còn, chạy `npx hardhat test --show-stack-traces` để kiểm tra nguyên nhân cụ thể.
 
 ## Deploy
 

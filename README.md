@@ -77,10 +77,12 @@ Phần hợp đồng dùng Hardhat 3 và Node.js 22 trở lên:
 
 ```powershell
 cd contracts
-npm install
+npm ci
 npx hardhat test
 npx hardhat ignition deploy ignition/modules/RiskFlow.ts --network sepolia
 ```
+
+Kiểm thử local không cần RPC hoặc khóa ví Sepolia. Khi chuyển project giữa Windows, macOS hoặc Linux, chạy lại `npm ci` trong `contracts` để cài đúng binary và quyền thực thi; không sao chép `node_modules` từ máy khác. Xem [runbook](docs/SEPOLIA_RUNBOOK.md) nếu gặp lỗi khởi động Hardhat.
 
 Trước khi deploy, đặt `SEPOLIA_RPC_URL` và `SEPOLIA_PRIVATE_KEY` trong `.env` ở thư mục gốc. Chỉ dùng ví thử nghiệm không chứa tài sản Mainnet. Sau khi deploy, dùng `python scripts/export_sepolia_scenario.py` để tạo payload replay từ artifact ABM.
 

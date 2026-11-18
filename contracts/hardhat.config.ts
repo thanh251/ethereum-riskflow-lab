@@ -1,11 +1,12 @@
-import { defineConfig } from "hardhat/config";
+import { configVariable, defineConfig } from "hardhat/config";
 import hardhatToolboxViem from "@nomicfoundation/hardhat-toolbox-viem";
 import dotenv from "dotenv";
+import { fileURLToPath } from "node:url";
 
-dotenv.config({ path: "../.env" });
-
-const sepoliaRpc = process.env.SEPOLIA_RPC_URL ?? "";
-const privateKey = process.env.SEPOLIA_PRIVATE_KEY ?? "";
+dotenv.config({
+  path: fileURLToPath(new URL("../.env", import.meta.url)),
+  quiet: true,
+});
 
 export default defineConfig({
   plugins: [hardhatToolboxViem],
@@ -15,14 +16,15 @@ export default defineConfig({
       production: { version: "0.8.28", settings: { optimizer: { enabled: true, runs: 200 } } }
     }
   },
-  networks: sepoliaRpc ? {
+  networks: {
     sepolia: {
       type: "http",
       chainType: "l1",
       chainId: 11155111,
-      url: sepoliaRpc,
-      accounts: privateKey ? [privateKey] : []
+      // Resolve deployment credentials only when Sepolia is selected.
+      url: configVariable("SEPOLIA_RPC_URL"),
+      accounts: [configVariable("SEPOLIA_PRIVATE_KEY")]
     }
-  } : {}
+  }
 });
 
