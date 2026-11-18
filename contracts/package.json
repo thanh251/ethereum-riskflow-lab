@@ -1,0 +1,22 @@
+{
+  "name": "riskflow-sepolia-contracts",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "wallet:sepolia": "node scripts/create-sepolia-wallet.mjs",
+    "deploy:local": "hardhat ignition deploy ignition/modules/RiskFlow.ts",
+    "deploy:sepolia": "hardhat ignition deploy ignition/modules/RiskFlow.ts --network sepolia",
+    "deploy:sepolia:full": "hardhat compile && hardhat run scripts/deploy-and-replay.ts --network sepolia"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox-viem": "^5.0.0",
+    "dotenv": "^17.0.0",
+    "hardhat": "^3.0.0",
+    "typescript": "~5.8.0",
+    "viem": "^2.38.0"
+  }
+}
+

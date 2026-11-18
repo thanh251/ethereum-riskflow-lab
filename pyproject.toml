@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ethereum-riskflow-lab"
+version = "0.1.0"
+description = "Explainable Ethereum Mainnet risk-flow simulation with temporal graphs, ABM and Sepolia validation"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+  { name = "Vu Thi Ha Nhi" },
+  { name = "Chau Tuan Thanh" },
+  { name = "Nguyen Duy Anh" }
+]
+
+[project.scripts]
+riskflow = "riskflow.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+

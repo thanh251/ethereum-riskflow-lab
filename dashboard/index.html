@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Ethereum RiskFlow Lab</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23152d3d'/%3E%3Cpath d='M32 8 18 32l14 8 14-8L32 8Zm0 36-14-8 14 20 14-20-14 8Z' fill='white'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div>
+      <p class="eyebrow">NHÓM 2 · NGHIÊN CỨU FINTECH</p>
+      <h1>Ethereum RiskFlow Lab</h1>
+      <p class="subtitle">Temporal transaction graph · Agent-Based Model · Sepolia validation</p>
+    </div>
+    <div class="status"><span></span><strong id="source-label">Đang tải dữ liệu</strong></div>
+  </header>
+
+  <main>
+    <section class="notice">
+      Điểm rủi ro dùng để ưu tiên điều tra, không phải kết luận một địa chỉ thực hiện hành vi phạm pháp.
+    </section>
+
+    <section id="kpis" class="kpi-grid"></section>
+
+    <section class="layout">
+      <article class="panel graph-panel">
+        <div class="panel-title">
+          <div><p class="eyebrow">TEMPORAL GRAPH</p><h2>Luồng tiền nổi bật</h2></div>
+          <div class="legend"><span class="node-dot high"></span>Rủi ro cao <span class="node-dot normal"></span>Khác</div>
+        </div>
+        <svg id="graph" viewBox="0 0 920 520" aria-label="Đồ thị giao dịch"></svg>
+        <p class="hint">Chọn một node để xem đặc trưng và lý do cảnh báo.</p>
+      </article>
+
+      <aside class="panel detail-panel">
+        <p class="eyebrow">GIẢI THÍCH</p>
+        <h2>Chi tiết địa chỉ</h2>
+        <div id="node-detail" class="empty">Chưa chọn địa chỉ.</div>
+      </aside>
+    </section>
+
+    <section class="panel">
+      <div class="panel-title">
+        <div><p class="eyebrow">ALERT QUEUE</p><h2>Cảnh báo ưu tiên</h2></div>
+        <div class="filters">
+          <button data-filter="all" class="active">Tất cả</button>
+          <button data-filter="high">Cao</button>
+          <button data-filter="medium">Trung bình</button>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Địa chỉ</th><th>Điểm</th><th>Mức độ</th><th>Lý do chính</th><th>Thời điểm</th></tr></thead>
+          <tbody id="alerts"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>Ethereum RiskFlow Lab · Prototype for research and education</footer>
+  <script src="app.js"></script>
+</body>
+</html>
+
