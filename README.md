@@ -94,6 +94,13 @@ Trước khi deploy, đặt `SEPOLIA_RPC_URL` và `SEPOLIA_PRIVATE_KEY` trong `.
 - ABM là stress test có kiểm soát, không thay thế bằng chứng Mainnet.
 - Sepolia chỉ chứng minh luồng kỹ thuật, không đại diện thanh khoản hay chi phí Mainnet.
 
+## Tài liệu dự án
+
+- [Kiến trúc hệ thống](docs/ARCHITECTURE.md)
+- [Thiết kế thí nghiệm](docs/EXPERIMENTS.md)
+- [Hướng dẫn vận hành Sepolia](docs/SEPOLIA_RUNBOOK.md)
+- [Bằng chứng kiểm chứng Sepolia](docs/SEPOLIA_EVIDENCE.md)
+
 ## Nguồn kỹ thuật chính
 
 - Google Cloud Blockchain Analytics Ethereum schema: https://docs.cloud.google.com/blockchain-analytics/docs/schema
