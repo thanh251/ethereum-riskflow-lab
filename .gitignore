@@ -35,6 +35,9 @@ data/raw/*.json
 data/processed/*.json
 data/results/*
 !data/results/.gitkeep
+!data/results/sepolia_evidence.json
+!data/results/sepolia_alert_explorer.png
+!data/results/sepolia_contract_explorer.png
 !data/raw/.gitkeep
 !data/processed/.gitkeep
 

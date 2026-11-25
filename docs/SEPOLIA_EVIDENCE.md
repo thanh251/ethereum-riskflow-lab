@@ -1,5 +1,13 @@
 # Bằng chứng triển khai Sepolia
 
+## Tệp kiểm chứng công khai
+
+- [Dữ liệu triển khai, receipt, gas và sự kiện](../data/results/sepolia_evidence.json)
+- [Ảnh giao dịch phát AlertRaised trên explorer](../data/results/sepolia_alert_explorer.png)
+- [Ảnh hợp đồng trên explorer](../data/results/sepolia_contract_explorer.png)
+
+Các tệp này ghi nhận lần chạy ngày 07/11/2026; ngày commit bổ sung bằng chứng có thể muộn hơn ngày thực nghiệm. Ảnh chụp dùng Sepolia Blockscout, còn liên kết bên dưới mở Sepolia Etherscan. Không bao gồm khóa ví hoặc tệp cấu hình riêng.
+
 - Thời điểm: 2026-11-07T15:45:28.231Z
 - Chain ID: 11155111
 - Ví triển khai: [0x23b1650A124E3F4D0Cc12EB3f4fD98014eb3a468](https://sepolia.etherscan.io/address/0x23b1650A124E3F4D0Cc12EB3f4fD98014eb3a468)
