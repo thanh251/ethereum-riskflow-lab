@@ -98,6 +98,7 @@ Trước khi deploy, đặt `SEPOLIA_RPC_URL` và `SEPOLIA_PRIVATE_KEY` trong `.
 
 - [Quy trình đóng góp và lịch sử Git](docs/GIT_WORKFLOW.md)
 - [Kiến trúc hệ thống](docs/ARCHITECTURE.md)
+- [Phương pháp mô phỏng và giới hạn suy luận](docs/SIMULATION_METHOD.md)
 - [Thiết kế thí nghiệm](docs/EXPERIMENTS.md)
 - [Hướng dẫn vận hành Sepolia](docs/SEPOLIA_RUNBOOK.md)
 - [Bằng chứng kiểm chứng Sepolia](docs/SEPOLIA_EVIDENCE.md)
